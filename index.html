@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .nav-bar {
+            display: flex;
+            background-color: black;
+            border: 1px solid red;
+            height: 60px;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            position: relative;
+            top: 10px;
+            left: 50vh;
+        }
+
+        .nav-bar li {
+            list-style: none;
+            margin: 16px 25px 0 25px;
+            font-size: 17px;
+        }
+
+        .nav-bar li a {
+            padding: 7px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-bar li a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #ffcc00;
+            font-weight: bolder;
+        }
+
+        .logo {
+            position: relative;
+            top: -2%;
+            left: 50px;
+            width: 90px;
+            height: 30px;
+            font-family: "Abril Fatface", serif;
+            font-size: 6vh;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+        .logo a:hover{
+            color:#ffcc00;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 550px;
+            top: 7px;
+            width: 150px;
+            height: 45px;
+            border-radius: 6px;
+            color: black;
+            background-color: black;
+            font-family: "Abril Fatface", serif;
+            border: none;
+        }
+
+        .btn a:hover {
+            cursor: pointer;
+            color:#ffcc00;
+            
+        }
+
+        .btn a:active {
+               color:#ffcc00;
+            
+        }
+        .btn a{
+            color:#000;
+            text-decoration: none;
+        }
+
+        .heading {
+            color: white;
+            font-family: "Abril Fatface", serif;
+            font-size: 5em;
+            position: relative;
+            top: 24vh;
+            left: 29vw;
+        }
+
+        .heading:hover {
+            color: #ffcc00;
+        }
+
+        .hero-btn {
+            background-color: black;
+            width: 22vh;
+            height: 8vh;
+            position: relative;
+            left: 54em;
+            top: 180px;
+        }
+
+        .hero-btn a {
+            color: white;
+            font-family: "Abril Fatface", serif;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .hero-btn a:hover {
+            transform: rotate(280);
+            transition: 1s ease-in-out;
+        }
+        .hero-btn a:hover{
+            color:#643ebb;
+        }
+
+        .hero-btn:hover{
+            background-color:#ffcc00;
+        }
+
+        #Chef {
+            height: 910px;
+            background-color: white;
+            padding: 60px 30px;
+            color: black;
+            position: relative;
+        }
+
+        #maincover {
+            height: 100vh;
+            background-image: url('https://media.istockphoto.com/id/2174149753/photo/serving-tongs-turning-sizzling-steaks-on-a-grill-with-tongues-of-flame-rising-from-the-white.webp?b=1&s=612x612&w=0&k=20&c=nWH-vHc7CBGnKKh3GHS0DRkErVp8spqOAJ6D2e365mU=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .Image {
+            position: relative;
+            right: 40px;
+        }
+
+        .Section2 {
+            width: 500px;
+            position: relative;
+            font-family: "Abril Fontface", serif;
+            font-size: 60px;
+            font-weight: 900;
+            font-style: italic;
+            bottom: 750px;
+            left: 850px;
+        }
+
+        .S2 {
+            position: absolute;
+            top: 200px;
+            left: 850px;
+        }
+
+        ::selection {
+            color: white;
+            background-color: black;
+        }
+
+        .para {
+            font-style: italic;
+            font-size: 17px;
+            color: gray;
+            width: 27em;
+            font-weight: 400;
+            position: relative;
+            bottom: 700px;
+            left: 810px;
+            margin: 15px;
+        }
+
+        .btn2 {
+            position: relative;
+            bottom: 700px;
+            left: 825px;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            width: 8.8em;
+            height: 3.4em;
+            font-size: 12px;
+        }
+
+        .btn2:hover {
+            background-color: black;
+            color: white;
+            width: 10em;
+            height: 4em;
+            cursor: pointer;
+        }
+
+        #Restaurant-Services {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #Restaurant-Services h2 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        #Restaurant-Services p {
+            color: #cccccc;
+            margin-top: 10px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 60px 80px;
+            text-align: center;
+        }
+
+        .service-card {
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            background-color: #912f40;
+            color: #ffffff;
+            box-shadow: 0 6px 18px rgba(160, 47, 9, 0.2);
+            transition: background 0.6s ease, transform 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card:nth-child(1):hover {
+            background: linear-gradient(to top, #ff9966, #ff5e62);
+        }
+
+        .service-card:nth-child(2):hover {
+            background: linear-gradient(to right, #ac3739, #643ebb);
+        }
+
+        .service-card:nth-child(3):hover {
+            background: linear-gradient(to left, #1c0b8e, #de40b2);
+        }
+
+        .service-card:nth-child(4):hover {
+            background: linear-gradient(to bottom, #43cea2, #185a9d);
+        }
+
+        .service-card:nth-child(5):hover {
+            background: linear-gradient(to bottom right, #04785d, #ffd200);
+        }
+
+        .service-card:nth-child(6):hover {
+            background: linear-gradient(to bottom left, #c1f007, #e90808);
+        }
+
+        .service-card img {
+            /* opacity: 0.3; */
+            transition: opacity 0.3s ease;
+        }
+
+        /* .service-card:hover img {
+            opacity: 1;
+        } */
+
+        .service-card h4 {
+            color: #ffd700;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            color: #e0e0e0;
+            font-size: 15px;
+            padding: 0 10px;
+            margin-top: 10px;
+        }
+/* Booking Section Styles */
+#booking {
+  background: #0f0f0f;
+  padding: 60px 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+}
+
+.booking-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.booking-title {
+  text-align: center;
+  color: #e0c36e;
+  margin-bottom: 30px;
+}
+
+.booking-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.booking-info {
+  flex: 1;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.booking-info h1 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.booking-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.booking-info li {
+  margin: 80px 0;
+  text-align: center;
+
+}
+.booking-info li:hover{
+
+     color: linear-gradient(to left, #d6a92d, #e0c36e);
+  /* box-shadow: 0 0 10px #e0c36e; */
+}
+
+.booking-form {
+  flex: 2;
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+#reservation-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e0c36e;
+  outline: none;
+  box-shadow: 0 0 6px rgba(224, 195, 110, 0.4);
+}
+
+.form-submit {
+  flex: 1 1 100%;
+  text-align: right;
+}
+
+.form-submit button {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #e0c36e, #c9a12d);
+  color: black;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-submit button:hover {
+  background: linear-gradient(to left, #d6a92d, #e0c36e);
+  box-shadow: 0 0 10px #e0c36e;
+}
+
+@media (max-width: 1000px) {
+  .booking-flex {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+  }
+
+  .form-submit {
+    text-align: center;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo"><a href="#">Steak.</a></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact </a></li>
+            </ul>
+            <button class="btn"><a href="#">Add Listing</a></button>
+        </nav>
+    </header>
+
+    <div id="maincover">
+        <div id="container">
+            <h1 class="heading" data-aos="flip-up">Welcome To Steak<br>Food & Restaurant</h1>
+            <button id="bb" class="hero-btn" data-aos="zoom-in-up"><a href="#">Order Now!</a></button>
+        </div>
+    </div>
+
+    <div id="Chef">
+        <img class="Image" src="Assets/Chef.webp" alt="">
+        <h1 class="Section2">Welcome to Steak</h1> <br>
+        <h1 class="Section2 S2">Food & Restaurant</h1>
+        <p class="para">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+            live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean.</p>
+        <p class="para">A small river named Duden flows by their place and supplies it with the necessary regelialia. It
+            is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        <button class="btn2">READ MORE</button>
+    </div>
+
+    <div id="Restaurant-Services">
+        <h2>Restaurant Services</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia <br>and Consonantia, there live the
+            blind texts.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="Assets/Noodles.png" alt="Noodles" width="130">
+                <h4>Noodles & Spaguetti</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+            <div class="service-card">
+                <img src="Assets/Ham Burger.png" alt="Burger" width="130">
+                <h4>Big Hamburger</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+            <div class="service-card">
+                <img src="Assets/Chicken Leg.png" alt="Chicken" width="130">
+                <h4>Chicken Leg</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+            <div class="service-card">
+                <img src="Assets/Vegetable Rice.png" alt="Vegetarian" width="130">
+                <h4>Vegetarian Food</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+            <div class="service-card">
+                <img src="Assets/Fish.png" alt="Fried Chicken" width="130">
+                <h4>Fried Chicken</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+            <div class="service-card">
+                <img src="Assets/Beef Steak.png" alt="Beef" width="130">
+                <h4>Beef Steak & Rib</h4>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="booking">
+  <div class="booking-wrapper" data-aos="fade-up">
+    <h1 class="booking-title">Reserve a Table</h1>
+    <div class="booking-flex">
+      <!-- Info Column -->
+      <div class="booking-info">
+        <h1>Restaurant Hours</h1>
+        <ul>
+          <li>Mon–Thu: 11 AM – 10 PM</li>
+          <li>Friday: 11 AM – 11:30 PM</li>
+          <li>Saturday: 12 PM – 12 AM</li>
+          <li>Sunday: 12 PM – 10 PM</li>
+        </ul>
+      </div>
+
+      <!-- Form Column -->
+      <div class="booking-form">
+        <form id="reservation-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" required pattern="03[0-9]{9}" placeholder="e.g. 03001234567">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label>Persons</label>
+            <select required>
+              <option>1 Person</option>
+              <option>2 People</option>
+              <option>3 People</option>
+              <option>4 People</option>
+              <option>5+ People</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="time" required>
+          </div>
+          <div class="form-submit">
+            <button type="submit">Book Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  document.getElementById('reservation-form').addEventListener('submit', function (e) {
+    const phone = this.querySelector('input[type="tel"]');
+    if (!/^03[0-9]{9}$/.test(phone.value)) {
+      alert("Please enter a valid phone number (e.g. 03001234567)");
+      phone.focus();
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
